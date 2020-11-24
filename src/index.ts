@@ -37,7 +37,6 @@ const getImports = (txt: string) => {
 };
 
 export const toESNEXT = (dir: string, cacheBuster = true) => {
-    console.log({ dir, cacheBuster });
     const fls = getFilesRecursive(dir);
     const cb = cacheBuster ? `?cb=${(new Date()).getTime()}` : "";
     fls.forEach(f => {
